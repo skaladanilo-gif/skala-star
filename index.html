@@ -240,21 +240,21 @@ body.ready .hint.show{opacity:1}
 <section class="scene" id="cases" data-ch="cases" aria-label="Cases">
   <div class="head"><p class="k mono">Resultados</p><h2>Quem viveu, <em>conta.</em></h2></div>
   <div class="cases">
-    <article class="vcard" data-video="media/bisi.mp4">
-      <img class="poster" src="img/case-bisi.webp" alt="Kaio, proprietário da Bisi">
+    <article class="vcard" data-video="https://skalamais.com.br/assets/video/bisi.mp4">
+      <img class="poster" src="case-bisi.webp" alt="Kaio, proprietário da Bisi">
       <div class="shade"></div>
       <a class="ig" href="https://www.instagram.com/assessoriaskala/reel/DXujnbRkgoq/" target="_blank" rel="noopener">Instagram ↗</a>
-      <div class="info"><img src="img/logo-bisi.png" alt="Bisi"><p class="stat" style="margin:0">3×</p><p class="lbl" style="margin:0">o faturamento em oito meses.</p><p class="who" style="margin:0">Kaio, proprietário</p></div>
+      <div class="info"><img src="logo-bisi.png" alt="Bisi"><p class="stat" style="margin:0">3×</p><p class="lbl" style="margin:0">o faturamento em oito meses.</p><p class="who" style="margin:0">Kaio, proprietário</p></div>
       <a class="vplay" href="https://www.instagram.com/assessoriaskala/reel/DXujnbRkgoq/" target="_blank" rel="noopener" aria-label="Assistir ao depoimento do Kaio, da Bisi"></a>
       <button class="vtap" type="button" aria-label="Pausar ou continuar o vídeo"></button>
       <button class="vmute" type="button" aria-label="Ativar ou desativar o som"></button>
       <div class="vbar"><i></i></div>
     </article>
-    <article class="vcard" data-video="media/maj.mp4">
-      <img class="poster" src="img/case-maj.webp" alt="Arthur, do comercial da MAJ Jacaraípe">
+    <article class="vcard" data-video="https://skalamais.com.br/assets/video/maj.mp4">
+      <img class="poster" src="case-maj.webp" alt="Arthur, do comercial da MAJ Jacaraípe">
       <div class="shade"></div>
       <a class="ig" href="https://www.instagram.com/p/DXK-v0mDOsU/" target="_blank" rel="noopener">Instagram ↗</a>
-      <div class="info"><img src="img/logo-maj-jacaraipe.png" alt="MAJ Jacaraípe"><p class="stat" style="margin:0"><small>R$</small>300 mil+</p><p class="lbl" style="margin:0">faturados no primeiro mês.</p><p class="who" style="margin:0">Arthur, comercial</p></div>
+      <div class="info"><img src="logo-maj-jacaraipe.png" alt="MAJ Jacaraípe"><p class="stat" style="margin:0"><small>R$</small>300 mil+</p><p class="lbl" style="margin:0">faturados no primeiro mês.</p><p class="who" style="margin:0">Arthur, comercial</p></div>
       <a class="vplay" href="https://www.instagram.com/p/DXK-v0mDOsU/" target="_blank" rel="noopener" aria-label="Assistir ao depoimento do Arthur, da MAJ Jacaraípe"></a>
       <button class="vtap" type="button" aria-label="Pausar ou continuar o vídeo"></button>
       <button class="vmute" type="button" aria-label="Ativar ou desativar o som"></button>
@@ -307,17 +307,17 @@ body.ready .hint.show{opacity:1}
   /* marcas */
   const B1=[['bisi','Bisi'],['maj-mobilidade','MAJ Mobilidade'],['mare-ebikes','Maré E-Bikes'],['chef-fantoni','Chef Fantoni Praia do Canto'],[null,'Dra. Katielle Rodrigues'],['econopro','econoPRO'],['topcarnes','TopCarnes'],['mercier-design','Mercier Design'],[null,'CMULLER'],[null,'JCN Industrial']];
   const B2=[['uniao-vix','UniãoVix'],['topcar','TopCar'],[null,'Sheila Torelly'],['abba-hardscapes','ABBA Hardscapes'],['oxa','Oxa Produtora'],['previsa-saude','Previsa Saúde'],['pristontech','PristonTech'],['carpe-diem','Carpe Diem'],['podcrer','Podcrer'],['vidapay','VidaPay']];
-  const li=(b,hide)=>`<li>${b[0]?`<img src="img/logo-${b[0]}.png" alt="${hide?'':b[1]}" loading="lazy">`:`<span class="wm">${b[1]}</span>`}</li>`;
+  const li=(b,hide)=>`<li>${b[0]?`<img src="logo-${b[0]}.png" alt="${hide?'':b[1]}" loading="lazy">`:`<span class="wm">${b[1]}</span>`}</li>`;
   const strips=$$('.strip');
   [B1,B2].forEach((list,k)=>{strips[k].innerHTML=`<ul>${list.map(b=>li(b)).join('')}</ul><ul aria-hidden="true">${list.map(b=>li(b,1)).join('')}</ul><ul aria-hidden="true">${list.map(b=>li(b,1)).join('')}</ul>`});
 
   /* equipe */
   const TEAM=[
-    {n:'David Mariano Jr.',r:'Sócio e diretor de criação',img:'img/team-david.webp',t:['Criação','Direção'],d:'Transforma o posicionamento da marca em ideia, campanha e conteúdo.'},
-    {n:'Guilherme Martins',r:'Sócio e diretor de performance',img:'img/team-guilherme.webp',t:['Performance','Mídia'],d:'Cuida da estratégia de mídia paga e de quem chega até o seu negócio.'},
-    {n:'Davi',r:'Videomaker',img:'img/team-davi.webp',t:['Vídeo','Estúdio'],d:'Grava e edita os vídeos que fazem a marca ser vista e lembrada.'},
-    {n:'Danilo',r:'Content manager',img:'img/team-danilo.webp',t:['Conteúdo'],d:'Organiza o conteúdo e mantém a marca presente com consistência.'},
-    {n:'Yasmin',r:'Designer',img:'img/team-yasmin.webp',t:['Design'],d:'Dá forma visual à mensagem, das peças de campanha ao feed.'},
+    {n:'David Mariano Jr.',r:'Sócio e diretor de criação',img:'team-david.webp',t:['Criação','Direção'],d:'Transforma o posicionamento da marca em ideia, campanha e conteúdo.'},
+    {n:'Guilherme Martins',r:'Sócio e diretor de performance',img:'team-guilherme.webp',t:['Performance','Mídia'],d:'Cuida da estratégia de mídia paga e de quem chega até o seu negócio.'},
+    {n:'Davi',r:'Videomaker',img:'team-davi.webp',t:['Vídeo','Estúdio'],d:'Grava e edita os vídeos que fazem a marca ser vista e lembrada.'},
+    {n:'Danilo',r:'Content manager',img:'team-danilo.webp',t:['Conteúdo'],d:'Organiza o conteúdo e mantém a marca presente com consistência.'},
+    {n:'Yasmin',r:'Designer',img:'team-yasmin.webp',t:['Design'],d:'Dá forma visual à mensagem, das peças de campanha ao feed.'},
     {n:'Carlos',r:'Gestor de tráfego',img:'',t:['Tráfego','Dados'],d:'Opera as campanhas e lê os números para ajustar a rota.'},
     {n:'Bianca',r:'Atendimento ao cliente',img:'',t:['Atendimento'],d:'É quem recebe você e conecta sua empresa ao time certo.'}
   ];
