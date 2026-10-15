@@ -340,8 +340,8 @@ body.ready .hint.show{opacity:1}
   window.__videos=[];
   $$('.vcard').forEach(card=>{
     const src=card.dataset.video;const play=card.querySelector('.vplay'),tap=card.querySelector('.vtap'),mute=card.querySelector('.vmute'),bar=card.querySelector('.vbar i');
-    const v=document.createElement('video');v.playsInline=true;v.preload='metadata';v.setAttribute('playsinline','');v.poster=card.querySelector('.poster').src;
-    let ok=false;
+    const v=document.createElement('video');v.playsInline=true;v.preload='none';v.setAttribute('playsinline','');v.poster=card.querySelector('.poster').src;
+    let ok=true;
     v.addEventListener('loadedmetadata',()=>{ok=true;card.classList.add('has-video')});
     v.addEventListener('error',()=>{ok=false;card.classList.remove('has-video')});
     v.src=src;card.insertBefore(v,card.querySelector('.shade'));
